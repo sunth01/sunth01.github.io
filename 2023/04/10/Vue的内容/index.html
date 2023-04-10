@@ -1,6 +1,183 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Core"><title>Vue的内容 · SunthBlog</title><meta name="description" content="title- vue原理"><meta name="keywords" content="极限博客,极限Blog,博客,极限"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">SunthBlog</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/sunth01"><i class="fa fa-github"></i></a></li><li><a href="mailto:x@jixian.io"><i class="fa fa-envelope"></i></a></li><li><a target="_blank" rel="noopener" href="http://sighttp.qq.com/authd?IDKEY="><i class="fa fa-qq"></i></a></li><li><a target="_blank" rel="noopener" href="https://zhihu.com/people/"><i class="fa fa-mortar-board"></i></a></li></ul><div class="footer"><div class="p"> <span>© 2017 - 2020 </span><i class="fa fa-star"></i><span> Core</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div><div class="beian"><a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备15011643号</a><span style="height:10px;margin-left: 10px;">|</span><img src="/images/gongan.png" style="height:10px;margin-left: 10px;position: relative;top: 1px;"><span style="margin-left: 2px;">粤公网安备 44030402003967号</span></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Vue的内容</a></h3></div><div class="post-content"><h2 id="title"><a href="#title" class="headerlink" title="title"></a>title</h2><pre><code>- vue原理
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Core"><title>前端面试题 · SunthBlog</title><meta name="description" content="(1)问题: 什么是作用域链？
+当代码在一个环境中执行时，会创建变量对象的一个作用域链      由子级作用域返回父级作用域中寻找变量，就叫做作用域链作用域链中的下一个变量对象来自包含环境，也叫外部环境。而再下一个变量对象则来自下一个包含环境，一直延续到全局执行环境。全局执行环境的变量对象始终都是作"><meta name="keywords" content="极限博客,极限Blog,博客,极限"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">SunthBlog</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/sunth01"><i class="fa fa-github"></i></a></li><li><a href="mailto:x@jixian.io"><i class="fa fa-envelope"></i></a></li><li><a target="_blank" rel="noopener" href="http://sighttp.qq.com/authd?IDKEY="><i class="fa fa-qq"></i></a></li><li><a target="_blank" rel="noopener" href="https://zhihu.com/people/"><i class="fa fa-mortar-board"></i></a></li></ul><div class="footer"><div class="p"> <span>© 2017 - 2020 </span><i class="fa fa-star"></i><span> Core</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div><div class="beian"><a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备15011643号</a><span style="height:10px;margin-left: 10px;">|</span><img src="/images/gongan.png" style="height:10px;margin-left: 10px;position: relative;top: 1px;"><span style="margin-left: 2px;">粤公网安备 44030402003967号</span></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>前端面试题</a></h3></div><div class="post-content"><h2 id="1-问题-什么是作用域链？"><a href="#1-问题-什么是作用域链？" class="headerlink" title="(1)问题: 什么是作用域链？"></a>(1)问题: 什么是作用域链？</h2><ul>
+<li>当代码在一个环境中执行时，会创建变量对象的一个作用域链      由子级作用域返回父级作用域中寻找变量，就叫做作用域链<br>作用域链中的下一个变量对象来自包含环境，也叫外部环境。而再下一个变量对象则来自下一个包含环境，一直延续到全局执行环境。全局执行环境的变量对象始终都是作用域链中的最后一个对象，<br>作用域链前端始终都是当前执行的代码所在环境的变量对象，如果环境是函数，则将其活动对象作为变量对象</li>
+</ul>
+<h2 id="2-问题-说说你对原型（prototype）理解"><a href="#2-问题-说说你对原型（prototype）理解" class="headerlink" title="(2)问题: 说说你对原型（prototype）理解?"></a>(2)问题: 说说你对原型（prototype）理解?</h2><ul>
+<li>JavaScript 中所有都是对象，在 JavaScript 中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的函数对象中都包含了一个” prototype”内部属性，这个属性所对应的就是该函数对象的原型<br>“prototype”作为函数对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome内核的JavaScript引擎中提供了”proto“这个非标准的访问器<br>原型的主要作用就是为了实现继承与扩展对象</li>
+</ul>
+<h2 id="3-问题-ES5-和-ES6-的区别，说几个-ES6-的新增方法"><a href="#3-问题-ES5-和-ES6-的区别，说几个-ES6-的新增方法" class="headerlink" title="(3)问题: ES5 和 ES6 的区别，说几个 ES6 的新增方法?"></a>(3)问题: ES5 和 ES6 的区别，说几个 ES6 的新增方法?</h2><ul>
+<li><h6 id="ES5和ES6的区别"><a href="#ES5和ES6的区别" class="headerlink" title="ES5和ES6的区别"></a>ES5和ES6的区别</h6><p>ECMAScript5，即ES5，是ECMAScript的第五次修订，于2009年完成标准化<br>ECMAScript6，即ES6，是ECMAScript的第六次修订，于2015年完成，也称ES2015<br>ES6是继ES5之后的一次改进，相对于ES5更加简洁，提高了开发效率</p>
+</li>
+<li><h6 id="ES6的新增方法"><a href="#ES6的新增方法" class="headerlink" title="ES6的新增方法:"></a>ES6的新增方法:</h6><ul>
+<li><h6 id="新增声明命令let和const"><a href="#新增声明命令let和const" class="headerlink" title="新增声明命令let和const"></a>新增声明命令let和const</h6></li>
+<li><h6 id="在ES6中通常用-let-和-const-来声明，let-表示变量、const-表示常量"><a href="#在ES6中通常用-let-和-const-来声明，let-表示变量、const-表示常量" class="headerlink" title="在ES6中通常用 let 和 const 来声明，let 表示变量、const 表示常量"></a>在ES6中通常用 let 和 const 来声明，let 表示变量、const 表示常量</h6></li>
+<li><h6 id="特点：let-和-const-都是块级作用域。以-代码块作为作用域范围-只能在代码块里面使用，不存在变量提升，只能先声明再使用，否则会报错。语法上，称为“暂时性死区”-在同一个代码块内，不允许重复声明"><a href="#特点：let-和-const-都是块级作用域。以-代码块作为作用域范围-只能在代码块里面使用，不存在变量提升，只能先声明再使用，否则会报错。语法上，称为“暂时性死区”-在同一个代码块内，不允许重复声明" class="headerlink" title="特点：let 和 const 都是块级作用域。以{}代码块作为作用域范围 只能在代码块里面使用，不存在变量提升，只能先声明再使用，否则会报错。语法上，称为“暂时性死区” 在同一个代码块内，不允许重复声明"></a>特点：let 和 const 都是块级作用域。以{}代码块作为作用域范围 只能在代码块里面使用，不存在变量提升，只能先声明再使用，否则会报错。语法上，称为“暂时性死区” 在同一个代码块内，不允许重复声明</h6></li>
+<li><h6 id="const声明的是一个只读常量，在声明时就需要赋值。（如果-const-的是一个对象，对-象所-包含的值是可以被修改的。抽象一点儿说，就是对象所指向的地址不能改变，而-变量成员是可以修改的。）"><a href="#const声明的是一个只读常量，在声明时就需要赋值。（如果-const-的是一个对象，对-象所-包含的值是可以被修改的。抽象一点儿说，就是对象所指向的地址不能改变，而-变量成员是可以修改的。）" class="headerlink" title="const声明的是一个只读常量，在声明时就需要赋值。（如果 const 的是一个对象，对 象所 包含的值是可以被修改的。抽象一点儿说，就是对象所指向的地址不能改变，而  变量成员是可以修改的。）"></a>const声明的是一个只读常量，在声明时就需要赋值。（如果 const 的是一个对象，对 象所 包含的值是可以被修改的。抽象一点儿说，就是对象所指向的地址不能改变，而  变量成员是可以修改的。）</h6></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h6 id="模板字符串（Template-String）"><a href="#模板字符串（Template-String）" class="headerlink" title="模板字符串（Template String）"></a>模板字符串（Template String）</h6><ul>
+<li><h6 id="用一对反引号-标识，它可以当作普通字符串使用，也可以用来定义多行字符串，也可以-在字符串中嵌入变量，js表达式或函数，变量、js表达式或函数需要写在-中。"><a href="#用一对反引号-标识，它可以当作普通字符串使用，也可以用来定义多行字符串，也可以-在字符串中嵌入变量，js表达式或函数，变量、js表达式或函数需要写在-中。" class="headerlink" title="用一对反引号(`)标识，它可以当作普通字符串使用，也可以用来定义多行字符串，也可以      在字符串中嵌入变量，js表达式或函数，变量、js表达式或函数需要写在${ }中。"></a>用一对反引号(`)标识，它可以当作普通字符串使用，也可以用来定义多行字符串，也可以      在字符串中嵌入变量，js表达式或函数，变量、js表达式或函数需要写在${ }中。</h6></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h6 id="函数的扩展"><a href="#函数的扩展" class="headerlink" title="函数的扩展"></a>函数的扩展</h6></li>
+<li><h6 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h6><ul>
+<li><h6 id="在ES6中，提供了一种简洁的函数写法，我们称作“箭头函数"><a href="#在ES6中，提供了一种简洁的函数写法，我们称作“箭头函数" class="headerlink" title="在ES6中，提供了一种简洁的函数写法，我们称作“箭头函数"></a>在ES6中，提供了一种简洁的函数写法，我们称作“箭头函数</h6></li>
+<li><h6 id="写法-函数名-形参-gt-……-当函数体中只有一个表达式时，-和return可以省-略当函数体中形参只有一个时，-可以省略"><a href="#写法-函数名-形参-gt-……-当函数体中只有一个表达式时，-和return可以省-略当函数体中形参只有一个时，-可以省略" class="headerlink" title="写法 函数名=(形参)=&gt;{……}当函数体中只有一个表达式时，{}和return可以省 略当函数体中形参只有一个时，()-  可以省略"></a>写法 函数名=(形参)=&gt;{……}当函数体中只有一个表达式时，{}和return可以省 略当函数体中形参只有一个时，()-  可以省略</h6></li>
+<li><h6 id="箭头函数中的-this-始终指向箭头函数定义时的离-this-最近的一个函数，如果没有最"><a href="#箭头函数中的-this-始终指向箭头函数定义时的离-this-最近的一个函数，如果没有最" class="headerlink" title="箭头函数中的 this 始终指向箭头函数定义时的离 this 最近的一个函数，如果没有最"></a>箭头函数中的 this 始终指向箭头函数定义时的离 this 最近的一个函数，如果没有最</h6><p> 近的函数就指向window</p>
+</li>
+</ul>
+</li>
+<li><p>对象的扩展</p>
+</li>
+<li><p>import和export</p>
+</li>
+<li><p>Promise对象</p>
+</li>
+<li><p>解构赋值</p>
+</li>
+</ul>
+<p>Set数据结构，类似数组。所有的数据都是唯一的，没有重复的值。它本身是一个构造函数。 </p>
+<ul>
+<li><p>Set属性和方法 </p>
+</li>
+<li><p>Size（） 数据的长度 </p>
+</li>
+<li><p>Add（） 添加某个值，返回 Set 结构本身。 </p>
+</li>
+<li><p>Delete（） 删除某个值，返回一个布尔值，表示删除是否成功。 </p>
+</li>
+<li><p>Has（） 查找某条数据，返回一个布尔值。 </p>
+</li>
+<li><p>Clear（）清除所有成员，没有返回值。<br>async、await</p>
+</li>
+<li><p>使用 async/await, 搭配Promise,可以通过编写形似同步的代码来处理异步流程, 提高代码 的简洁性和可读性async 用于申明一个 function 是异步的，而 await 用于等待一个异步方 法执行完成<br>…</p>
+</li>
+<li><p>展开运算符可以将数组或对象里面的值展开；还可以将多个值收集为一个变量</p>
+<h2 id="4-问题-介绍-this-各种情况"><a href="#4-问题-介绍-this-各种情况" class="headerlink" title="(4)问题: 介绍 this 各种情况?"></a>(4)问题: 介绍 this 各种情况?</h2></li>
+<li><p>以函数形式调用时，this永远都是window</p>
+</li>
+<li><p>以方法的形式调用时，this是调用方法的对象</p>
+</li>
+<li><p>以构造函数的形式调用时，this是新创建的那个对象</p>
+</li>
+<li><p>使用call和apply调用时，this是指定的那个对象</p>
+</li>
+<li><p>箭头函数：箭头函数的this看外层是否有函数如果有，外层函数的this就是内部箭头函数的this 如果没有，就是window</p>
+</li>
+<li><p>特殊情况：通常意义上this指针指向为最后调用它的对象。这里需要注意的一点就是如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么 this还是指向函数的实例</p>
+</li>
+</ul>
+<h2 id="5-为什么会有跨域问题的出现？怎么解决跨域？"><a href="#5-为什么会有跨域问题的出现？怎么解决跨域？" class="headerlink" title="(5)为什么会有跨域问题的出现？怎么解决跨域？"></a>(5)为什么会有跨域问题的出现？怎么解决跨域？</h2><ul>
+<li>由于Web浏览器的同源策略所导致的，是一种安全策略，同源是指两个URL具有相同的协议、主机和端口号。如果两个URL的任何一个部分不同，就被认为是不同源。当一个Web页面通过JavaScript代码访问来自不同源的资源时，浏览器就会禁止这种行为，这就是跨域问题的根源。</li>
+<li>JSONP（JSON with padding）：使用 <code>&lt;script&gt;</code> 标签进行跨域数据传输，服务器端将数据封装到回调函数中，前端使用回调函数接收数据。但是 JSONP 只支持 GET 请求，并且存在安全风险。</li>
+<li>代理服务器：在客户端与服务端之间增加一个代理服务器，使客户端与代理服务器的通信符合同源策略，再由代理服务器与目标服务器进行通信，避免跨域问题。</li>
+<li>CORS（Cross-Origin Resource Sharing）：通过在服务器端设置响应头信息来允许跨域访问，允许指定特定域名下的请求。</li>
+</ul>
+<h2 id="6-Vuex-的-5-个核心属性"><a href="#6-Vuex-的-5-个核心属性" class="headerlink" title="(6)Vuex 的 5 个核心属性"></a>(6)Vuex 的 5 个核心属性</h2><ul>
+<li>state：在state中需要定义我们所需要管理的数组、对象、字符串等</li>
+<li>getters：当我们需要从store的state 中派生出一些状态，那么我们就需要使用getter，getter会接收state作为第一个参数，而且getter的返回值会根据它的依赖被缓存起来，只有getter中的依赖值发生改变的时候才会被重新计算</li>
+<li>mutation ：更改store中state状态的唯一方法就是提交mutation，每个mutation都有一个字符串类型的事件类型和一个回调函数，我们需要改变state的值就要在回调函数中改变。要执行这个回调函数，那么我们需要执行一个相应的调用方法：store.commit</li>
+<li>action ：</li>
+<li>action可以提交mutation，在action中可以执行store.commit，而且action中可以有任何的异步操作。如果我们要调用这个action，则需要执行store.dispatch</li>
+<li>module ：module可以将store分割成模块，使得应用程序更易于扩展和维护，每个模块中拥有自己的state、mutation、action 和getter</li>
+</ul>
+<h2 id="7-EventLoop-事件循环机制"><a href="#7-EventLoop-事件循环机制" class="headerlink" title="(7)EventLoop 事件循环机制"></a>(7)EventLoop 事件循环机制</h2><ul>
+<li><p>宏任务：</p>
+<ul>
+<li>\1. script代码块</li>
+<li>\2. setTimeout / setInterval</li>
+<li>\3. setImmediate</li>
+</ul>
+</li>
+<li><p>微任务：</p>
+<ul>
+<li><ol>
+<li>promise.then() 和 promise.catch()</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>async await （await 这一行的代码，同步执行的）（await 后面的代码会放到微任务队列中）</li>
+</ol>
+</li>
+<li><pre><code>  3.MutationObserver
 </code></pre>
-</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/Vue的内容/,SunthBlog,Vue的内容,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/hello-world/" title="Hello World">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+</li>
+<li><pre><code>  4.process.nextTick
+</code></pre>
+</li>
+</ul>
+</li>
+<li><ol>
+<li>首先script代码块可以看做第一个宏任务，开始第一个Tick事件循环</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>会先执行script代码块中的同步代码，</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>如果遇到宏任务，就放到宏任务队列中等待执行,  如果遇到微任务，放到微任务队列中</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>当主线程执行完同步代码的时候，首先，去微任务队列中清空当前事件循环的所有微任务 （本轮事件循环Tick结束）</li>
+</ol>
+</li>
+<li><pre><code>  5.再去执行下一个宏任务  ==&gt; 重复执行，直到宏任务队列和微任务队列都为空。
+</code></pre>
+</li>
+<li><p>需要注意的是，事件循环机制中的微任务具有高优先级，会优先于宏任务执行。因此，在事件循环中，每次执行完一个宏任务后，会立即执行产生的所有微任务，而不是等待下一个宏任务执行时再执行微任务。</p>
+</li>
+</ul>
+<h2 id="8-路由传值的方式有哪几种"><a href="#8-路由传值的方式有哪几种" class="headerlink" title="(8)路由传值的方式有哪几种"></a>(8)路由传值的方式有哪几种</h2><ul>
+<li></li>
+<li><p>查询参数传值（Query Parameter）：在 URL 路径后面加上问号 “?” 和参数名以及参数值，使用 “&amp;” 符号分隔多个参数，如 ：<a target="_blank" rel="noopener" href="http://www.example.com/?id=123&amp;name=foo">http://www.example.com?id=123&amp;name=foo</a></p>
+</li>
+<li><p>对象 : 想要传递参数主要就是以对象的方式来写，分为两种方式：命名路由、查询参数</p>
+<ul>
+<li>this.$router.push( { <strong>name</strong>:”news”, <strong>params</strong> : { userId : 123 } ) （命名路由 这种方式传递参数，目标页面刷新会报错）</li>
+<li>this.$router.push( { <strong>path</strong>:”/news’, <strong>query</strong> : { uersId : 123 } )  接收参数 this.$route.query  （查询参数 和 name 配对的式 params，和 path 配对的是query）</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-怎么定义Vue-Router的动态路由-怎么获取传过来的动态参数"><a href="#9-怎么定义Vue-Router的动态路由-怎么获取传过来的动态参数" class="headerlink" title="(9)怎么定义Vue-Router的动态路由?怎么获取传过来的动态参数?"></a>(9)怎么定义Vue-Router的动态路由?怎么获取传过来的动态参数?</h2><ul>
+<li><p>在定义动态路由时，需要在路由的path中添加动态参数，使用冒号（:）表示参数名。</p>
+</li>
+<li><p>例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> <span class="title class_">VueRouter</span>(&#123;</span><br><span class="line">  <span class="attr">routes</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;/users/:userId&#x27;</span>,</span><br><span class="line">      <span class="attr">component</span>: <span class="title class_">User</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line">路由的path中添加了一个动态参数:userId，这个参数可以匹配任意的数字或字符串。当访问/users/<span class="number">123</span>时，路由会匹配到这个动态路由，并将参数传递给对应的组件。</span><br></pre></td></tr></table></figure></li>
+<li><p>可以通过$route.params来获取动态参数的值，</p>
+</li>
+<li><p>例如：</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">const</span> <span class="title class_">User</span> = &#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">&#x27;&lt;div&gt;User &#123;&#123; $route.params.userId &#125;&#125;&lt;/div&gt;&#x27;</span></span><br><span class="line">	&#125;</span><br><span class="line">	$route.<span class="property">params</span>.<span class="property">userId</span>会获取到动态参数的值，例如当访问/users/<span class="number">123</span>时，$route.<span class="property">params</span>.<span class="property">userId</span>的值就是<span class="number">123</span>，就可以根据不同的动态参数来展示不同的内容。</span><br><span class="line"></span><br><span class="line">## (<span class="number">10</span>)query和params之间的区别是什么</span><br><span class="line"></span><br><span class="line">- query要用path来引入，params要用name来引入</span><br><span class="line">- 接收参数时，分别是<span class="variable language_">this</span>.<span class="property">$route</span>.<span class="property">query</span>.<span class="property">name</span> 和 <span class="variable language_">this</span>.<span class="property">$route</span>.<span class="property">params</span>.<span class="property">name</span>（注意：是$route而不是$router）</span><br><span class="line"></span><br><span class="line">## (<span class="number">11</span>)如何进行性能优化</span><br><span class="line"></span><br><span class="line">- 减少<span class="variable constant_">HTTP</span>请求</span><br><span class="line">- 减少<span class="variable constant_">DOM</span>操作</span><br><span class="line">- 页面懒加载</span><br><span class="line"></span><br><span class="line">## (<span class="number">12</span>)项目中的 axios 怎么使用？</span><br><span class="line"></span><br><span class="line">- npm i axios安装依赖</span><br><span class="line"></span><br><span class="line">- <span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span> 导入</span><br><span class="line"></span><br><span class="line">- 用于在客户端和服务器之间发送 <span class="variable constant_">HTTP</span> 请求，首先导入了 axios 模块，然后使用 <span class="string">`axios.get`</span> 方法发出 <span class="variable constant_">GET</span> 请求。该方法的第一个参数是要请求的 <span class="variable constant_">URL</span>，第二个参数是可选的配置对象。我们链式调用 <span class="string">`.then`</span> 和 <span class="string">`.catch`</span> 方法来处理成功和失败的情况。</span><br><span class="line"></span><br><span class="line">  <span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">  import axios from &#x27;axios&#x27;;</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">  axios.get(&#x27;/api/data&#x27;)</span></span><br><span class="line"><span class="string">    .then(response =&gt; &#123;</span></span><br><span class="line"><span class="string">      console.log(response.data);</span></span><br><span class="line"><span class="string">    &#125;)</span></span><br><span class="line"><span class="string">    .catch(error =&gt; &#123;</span></span><br><span class="line"><span class="string">      console.error(error);</span></span><br><span class="line"><span class="string">    &#125;);</span></span><br></pre></td></tr></table></figure></li>
+<li><p>其他类型的请求（例如 POST、PUT 或 DELETE），例如 <code>axios.post</code>、<code>axios.put</code> 或 <code>axios.delete</code>。还可以通过将配置对象作为第二个参数传递给这些方法来定制请求的详细信息，例如请求头、请求体等等。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">axios.<span class="title function_">post</span>(<span class="string">&#x27;/api/data&#x27;</span>, &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;John Doe&#x27;</span>,</span><br><span class="line">  <span class="attr">email</span>: <span class="string">&#x27;johndoe@example.com&#x27;</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">  <span class="attr">headers</span>: &#123;</span><br><span class="line">    <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;application/json&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(response.<span class="property">data</span>);</span><br><span class="line">&#125;)</span><br><span class="line">.<span class="title function_">catch</span>(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">error</span>(error);</span><br><span class="line">&#125;);</span><br><span class="line">示例中，我们使用 axios.<span class="property">post</span> 方法发送 <span class="variable constant_">POST</span> 请求，请求体包含一个 <span class="title class_">JSON</span> 对象，请求头指定了内容类型为 <span class="title class_">JSON</span>。</span><br><span class="line">需要注意的是，axios 返回的是一个 <span class="title class_">Promise</span> 对象，因此您可以使用 <span class="keyword">async</span>/<span class="keyword">await</span> 或 .<span class="property">then</span>/.<span class="property">catch</span> 进行异步处理。</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="系统如何进行权限控制和实现"><a href="#系统如何进行权限控制和实现" class="headerlink" title="系统如何进行权限控制和实现?"></a>系统如何进行权限控制和实现?</h2><h2 id="如何区分数组和对象？"><a href="#如何区分数组和对象？" class="headerlink" title="如何区分数组和对象？"></a>如何区分数组和对象？</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 通过<span class="keyword">typeof</span>判断大多基本的数据类型</span><br><span class="line"><span class="keyword">typeof</span> <span class="number">123</span>  <span class="comment">// number</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.</span> 通过<span class="keyword">instanceof</span>判断一个对象是否属于某个特定的构造函数</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> <span class="title class_">Date</span>()</span><br><span class="line">a <span class="keyword">instanceof</span> <span class="title class_">Date</span>  <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span> <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span> 可以返回一个对象的类型，格式为<span class="string">&quot;[object Type]&quot;</span>，其中<span class="title class_">Type</span>表示对象的类型。</span><br><span class="line"><span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>([])  <span class="comment">// &quot;[object Array]&quot;</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(<span class="number">42</span>)  <span class="comment">// &quot;[object Number]&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4.</span> <span class="title class_">Array</span>.<span class="property">isArray</span>方法：可以判断一个对象是否为数组。</span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>([]); <span class="comment">// true</span></span><br><span class="line"><span class="title class_">Array</span>.<span class="title function_">isArray</span>(&#123;&#125;); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="new-操作符具体干了什么呢"><a href="#new-操作符具体干了什么呢" class="headerlink" title="new 操作符具体干了什么呢?"></a>new 操作符具体干了什么呢?</h2><h2 id="vue页面如何做缓存控制？"><a href="#vue页面如何做缓存控制？" class="headerlink" title="vue页面如何做缓存控制？"></a>vue页面如何做缓存控制？</h2><h2 id="讲讲-excel-导入和导出的实现"><a href="#讲讲-excel-导入和导出的实现" class="headerlink" title="讲讲 excel 导入和导出的实现?"></a>讲讲 excel 导入和导出的实现?</h2><h2 id="Vue-数据双向绑定的原理是什么"><a href="#Vue-数据双向绑定的原理是什么" class="headerlink" title="Vue 数据双向绑定的原理是什么?"></a>Vue 数据双向绑定的原理是什么?</h2><ul>
+<li>Vue 数据双向绑定的原理是利用了 JavaScript 的 <code>Object.defineProperty()</code> 方法实现的。</li>
+<li>当一个 Vue 实例创建时，Vue 会对实例中的数据进行劫持，即使用 <code>Object.defineProperty()</code> 方法将数据转换成 getter 和 setter，在数据被读取和修改时，可以触发相应的回调函数，实现数据的响应式更新。这样，在 Vue 模板中使用这些数据时，Vue 可以将模板和数据建立起双向绑定的关系，即数据的变化会自动反映在模板中，模板的变化也会自动反映在数据中。</li>
+<li>具体来说，当模板中的数据被修改时，Vue 会通过 setter 方法将修改的值存储到相应的数据中，然后触发更新。在更新时，Vue 会重新渲染相关的组件和 DOM，将修改后的数据显示出来。同时，如果数据的依赖发生变化，Vue 会重新计算依赖，触发相关的回调函数。</li>
+<li>总之，Vue 数据双向绑定的原理是将数据转换成 getter 和 setter，在数据变化时触发相应的回调函数，实现数据的响应式更新，并且通过依赖追踪，自动更新相关的组件和 DOM。</li>
+</ul>
+<h2 id="Vue-的路由实现模式：hash-模式和history-模式"><a href="#Vue-的路由实现模式：hash-模式和history-模式" class="headerlink" title="Vue 的路由实现模式：hash 模式和history 模式?"></a>Vue 的路由实现模式：hash 模式和history 模式?</h2><p><strong>hash 模式</strong>：在浏览器中符号“#”，#以及#后面的字符称之为 hash，用 window.location.hash 读取。hash 不会重新加载页面。</p>
+<p><strong>history 模式</strong>：history 采用 HTML5 的新特性；且提供了两个新方法： pushState()， replaceState()可以对浏览器历史记录栈进行修改，以及 popState 事件的监听到状态变更</p>
+<h2 id="什么是闭包"><a href="#什么是闭包" class="headerlink" title="什么是闭包"></a>什么是闭包</h2><p>闭包是指在一个函数内部定义的函数，它可以访问外部函数的变量和参数，即使在外部函数已经执行完毕的情况下也能够保持对这些变量和参数的引用，在JavaScript中，闭包是通过使用函数嵌套来实现的。内部函数可以访问外部函数的变量和参数，因为在创建内部函数时，JavaScript引擎会将外部函数的作用域链添加到内部函数的作用域链中，从而使得内部函数可以访问外部函数的变量和参数。当外部函数执行完毕后，闭包仍然可以保持对外部函数的作用域链的引用，因此它可以在需要时访问外部函数的变量和参数。</p>
+<p>优点是 延伸了变量的作用范围 因为闭包函数中的局部变量不会等着闭包函数执行完就销毁, 因为还有别的函数要调用它 , 只有等着所有的函数都调用完了他才会销毁，</p>
+<p>缺点是内存泄漏 内存泄漏就是内存空间使用完毕之后未回收)即所谓内存泄漏。</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/Vue的内容/,SunthBlog,前端面试题,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/hello-world/" title="快捷入门">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
   el:'#vcomments',
   notify:false || false, 
   verify:false|| false, 
