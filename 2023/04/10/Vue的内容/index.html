@@ -86,6 +86,84 @@ key的作用：
 <li><p>特殊情况：通常意义上this指针指向为最后调用它的对象。这里需要注意的一点就是如果返回值是一个对象，那么this指向的就是那个返回的对象，如果返回值不是一个对象那么 this还是指向函数的实例</p>
 </li>
 </ul>
+<h2 id="关于计算属性"><a href="#关于计算属性" class="headerlink" title="关于计算属性"></a>关于计算属性</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">computed</span>:&#123;</span><br><span class="line">    <span class="title function_">sum</span>(<span class="params"></span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">num1</span> + <span class="variable language_">this</span>.<span class="property">num2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ES6 简写形式更多一些</li>
+<li><ol>
+<li>计算属性，必须是一个函数 </li>
+</ol>
+</li>
+<li><ol start="2">
+<li>这个函数一定要写一个return，必须要有返回值</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>计算属性函数中的this指向的也是vue实例，如果要取data中的变量 ，this.xx</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>计算属性使用的时候，和data里面的数据一样，不能加()当做方法来调用！</li>
+</ol>
+</li>
+<li><ol start="5">
+<li>计算属性的变量名不能和data中的变量名一样</li>
+</ol>
+</li>
+</ul>
+<h2 id="计算属性相比函数调用的优势"><a href="#计算属性相比函数调用的优势" class="headerlink" title="计算属性相比函数调用的优势"></a>计算属性相比函数调用的优势</h2><ul>
+<li>多次使用的时候，计算属性有缓存，性能消耗小</li>
+<li>特点</li>
+<li><ol>
+<li>计算属性会缓存结果，只要依赖项不改变，就直接读取缓存</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>依赖项改变，函数重新执行并缓存最新的结果</li>
+</ol>
+</li>
+<li>使用场景</li>
+<li>=&gt;当某个值依赖其他值的时候，就可以使用计算属性。</li>
+<li><ol>
+<li>求和 ， 求平均值 </li>
+</ol>
+</li>
+<li><ol start="2">
+<li>全选反选等</li>
+</ol>
+</li>
+</ul>
+<h2 id="关于BFC"><a href="#关于BFC" class="headerlink" title="关于BFC"></a>关于BFC</h2><ul>
+<li>BFC Block Formatting Context 块级格式化上下文</li>
+<li>创建了一个独立的空间，独立的容器，内部和外部的布局等互不干扰。</li>
+<li>==&gt; BFC是一个完全独立的空间（布局环境），让空间里的子元素不会影响到 - </li>
+<li>触发条件（怎么创建一个BFC）</li>
+<li><ol>
+<li>overflow:hidden</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>float:left / right</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>position:absolute / fixed;</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>display:inline-block / flex / table  - </li>
+</ol>
+</li>
+<li>外边距塌陷：==&gt; 上下两个盒子，都有margin， 取margin - </li>
+<li>应用场景：</li>
+<li><ol>
+<li>防止外边距塌陷</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>清浮动，（包含浮动元素），计算BFC高度的时候，浮动的子元素也会参与计算。</li>
+</ol>
+</li>
+</ul>
 <h2 id="5-为什么会有跨域问题的出现？怎么解决跨域？"><a href="#5-为什么会有跨域问题的出现？怎么解决跨域？" class="headerlink" title="(5)为什么会有跨域问题的出现？怎么解决跨域？"></a>(5)为什么会有跨域问题的出现？怎么解决跨域？</h2><ul>
 <li>由于Web浏览器的同源策略所导致的，是一种安全策略，同源是指两个URL具有相同的协议、主机和端口号。如果两个URL的任何一个部分不同，就被认为是不同源。当一个Web页面通过JavaScript代码访问来自不同源的资源时，浏览器就会禁止这种行为，这就是跨域问题的根源。</li>
 <li>JSONP（JSON with padding）：使用 <code>&lt;script&gt;</code> 标签进行跨域数据传输，服务器端将数据封装到回调函数中，前端使用回调函数接收数据。但是 JSONP 只支持 GET 请求，并且存在安全风险。</li>
