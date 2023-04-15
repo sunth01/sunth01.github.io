@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>前端面试题 · Sunth01</title><meta name="description" content="Vuex前言Vuex的安装
+npm i vuex
+
+新建文件夹store import引入Vuex，
+vuex中的参数：
+
+state：{ count：0 } 存储数据
+mutations：{ updateCount（两个参数，第一个参数是修改的state、后续调用的传值）{ state.count"><meta name="keywords" content="极限博客,极限Blog,博客,极限"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Sunth01</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> </span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div><div class="beian"><a href="http://www.beian.miit.gov.cn/" target="_blank"></a><span style="height:10px;margin-left: 10px;">|</span><img src="/images/gongan.png" style="height:10px;margin-left: 10px;position: relative;top: 1px;"><span style="margin-left: 2px;"></span></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>前端面试题</a></h3></div><div class="post-content"><h2 id="Vuex前言"><a href="#Vuex前言" class="headerlink" title="Vuex前言"></a>Vuex前言</h2><h5 id="Vuex的安装"><a href="#Vuex的安装" class="headerlink" title="Vuex的安装"></a>Vuex的安装</h5><ul>
+<li>npm i vuex</li>
+</ul>
+<p>新建文件夹store import引入Vuex，</p>
+<p>vuex中的参数：</p>
+<ul>
+<li><strong>state</strong>：{ count：0 } 存储数据</li>
+<li><strong>mutations</strong>：{ updateCount（两个参数，第一个参数是修改的state、后续调用的传值）{ state.count = num } }</li>
+<li><strong>getters</strong> 可以理解为computed 是为了方便生成一些在组件内可以直接使用的数据，统一产出state中的数据，</li>
+<li>在store.js中 要ipmort vue 之后 Vue.use（Vuex）</li>
+<li>通过 export defautle store导出 </li>
+<li><img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415114314480.png" alt="image-20230415114314480" style="zoom:50%;" /></li>
+</ul>
+<p>在入口文件index.js中 先import 中引入store文件，然后在实例上挂载</p>
+<p>使用store的方法：直接在应用中 this.$store 调用全局  因为vuex会帮助处理在每个组件内部添加上这个$store对象，如果要修改store中定义的参数，需要使用this.$store.commit（传入的参数，第一个参数”我们写的mutations的名称updateCount“，第二个参数就是num 这个值是可选换的，例如 外部声明一个变量 let i = 1  这个i就可以作为参数传入num的位置）</p>
+<p>store.js中可以直接expore default （）=&gt;{ return new Vuex.store 如下图 }</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415121554719.png" alt="image-20230415121554719" style="zoom:50%;" />
+
+<p>在index.js中 import 引入store.js文件 ，在下面创建一个store 如下</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415121816111.png" alt="image-20230415121816111" style="zoom:50%;" />
+
+<p><strong>getters 的使用</strong></p>
+<ul>
+<li>在state中添加参数</li>
+</ul>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415122745358.png" alt="image-20230415122745358" style="zoom:50%;" />
+
+<p>在getters中定义一个方法 传入一个state作为参数 返回从state中获取到的参数</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415122819027.png" alt="image-20230415122819027" style="zoom:50%;" />
+
+<p>在computed中调用getters中的方法进行return返回 在vue文件中使用插值表达式使用，通过updateCount的更新修改就会让getters中的内容发生改变</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415122908859.png" alt="image-20230415122908859" style="zoom:50%;" />
+
+<p>组件内使用store可以使用vuex中自带的帮助方法，<strong>mapState</strong> 和 <strong>mapGetters</strong> 使用前需要inport 从vuex中引入进来</p>
+<p><strong>mapState</strong> 的作用是 映射$store.state内定义的参数 ，如下：</p>
+<p>同名情况下</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415124559768.png" alt="image-20230415124559768" style="zoom:50%;" />
+
+<p>不同名的情况：</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415124703787.png" alt="image-20230415124703787" style="zoom:50%;" />
+
+<p>如果要做计算的情况，可以使用 如下：</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415124752550.png" alt="image-20230415124752550" style="zoom:50%;" />
+
+<p><strong>mapGetters</strong> 可以替换 return this.$store.getters.xxx的内容</p>
+<img src="C:\Users\86132\AppData\Roaming\Typora\typora-user-images\image-20230415124958518.png" alt="image-20230415124958518" style="zoom:50%;" /></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/关于Vuex/,Sunth01,前端面试题,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/Vue%E7%9A%84%E5%86%85%E5%AE%B9/" title="前端面试题">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/hello-world/" title="快捷入门">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'Sj7U6VyVNk4L01EU9nLmESxi-gzGzoHsz',
+  app_key:'5vu6nZlOhpfwbUa9hxZVUHLo',
+  placeholder:'念念不忘，必有回响...',
+  path: window.location.pathname,
+  serverURLs: 'https://sj7u6vyv.lc-cn-n1-shared.com',
+  visitor:true,
+  recordIP:true,
+  avatar:'mp'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":140,"height":300,"hOffset":-17,"vOffset":-5},"mobile":{"show":false,"scale":0.2},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false});</script></body></html>
