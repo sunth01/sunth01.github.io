@@ -18,7 +18,10 @@ key的作用：
 <li>当代码在一个环境中执行时，会创建变量对象的一个作用域链      由子级作用域返回父级作用域中寻找变量，就叫做作用域链<br>作用域链中的下一个变量对象来自包含环境，也叫外部环境。而再下一个变量对象则来自下一个包含环境，一直延续到全局执行环境。全局执行环境的变量对象始终都是作用域链中的最后一个对象，<br>作用域链前端始终都是当前执行的代码所在环境的变量对象，如果环境是函数，则将其活动对象作为变量对象</li>
 </ul>
 <h2 id="2-问题-说说你对原型（prototype）理解"><a href="#2-问题-说说你对原型（prototype）理解" class="headerlink" title="(2)问题: 说说你对原型（prototype）理解?"></a>(2)问题: 说说你对原型（prototype）理解?</h2><ul>
-<li>JavaScript 中所有都是对象，在 JavaScript 中，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的函数对象中都包含了一个” prototype”内部属性，这个属性所对应的就是该函数对象的原型<br>“prototype”作为函数对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome内核的JavaScript引擎中提供了”proto“这个非标准的访问器<br>原型的主要作用就是为了实现继承与扩展对象</li>
+<li>JavaScript 中所有都是对象，原型也是一个对象，通过原型可以实现对象的属性继承，JavaScript的函数对象中都包含了一个” prototype”内部属性，这个属性所对应的就是该函数对象的原型<br>“prototype”作为函数对象的内部属性，是不能被直接访问的。所以为了方便查看一个对象的原型，Firefox和Chrome内核的JavaScript引擎中提供了”proto“这个非标准的访问器 <blockquote>
+<p>原型的主要作用就是为了实现继承与扩展对象</p>
+</blockquote>
+</li>
 </ul>
 <h2 id="3-问题-ES5-和-ES6-的区别，说几个-ES6-的新增方法"><a href="#3-问题-ES5-和-ES6-的区别，说几个-ES6-的新增方法" class="headerlink" title="(3)问题: ES5 和 ES6 的区别，说几个 ES6 的新增方法?"></a>(3)问题: ES5 和 ES6 的区别，说几个 ES6 的新增方法?</h2><ul>
 <li><h6 id="ES5和ES6的区别"><a href="#ES5和ES6的区别" class="headerlink" title="ES5和ES6的区别"></a>ES5和ES6的区别</h6><p>ECMAScript5，即ES5，是ECMAScript的第五次修订，于2009年完成标准化<br>ECMAScript6，即ES6，是ECMAScript的第六次修订，于2015年完成，也称ES2015<br>ES6是继ES5之后的一次改进，相对于ES5更加简洁，提高了开发效率</p>
@@ -375,11 +378,23 @@ key的作用：
 </ol>
 <h2 id="关于生命周期"><a href="#关于生命周期" class="headerlink" title="关于生命周期"></a>关于生命周期</h2><p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5ccd16fe2d1942e699bde7a7971c26a2~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp" alt="生命周期.webp"> </p>
 <h2 id="什么是跨域？跨域的解决方案有哪些？"><a href="#什么是跨域？跨域的解决方案有哪些？" class="headerlink" title="什么是跨域？跨域的解决方案有哪些？"></a>什么是跨域？跨域的解决方案有哪些？</h2><blockquote>
-<p>解决方案</p>
+<p><strong>解决方案</strong></p>
 <ul>
-<li>方案一：前端+后端，支持jsonp方式请求 -&gt; 仅支持GET方式，不支持POST方式</li>
-<li>方案二：后端开启CORS跨域资源共享（就是在响应头里设置一个字段  Access-Control-Allow-Origin：* ）本服务器允许任何人来请求，前端正常请求，浏览器发现这个端口允许跨域，所以不报错拿到数据给前端用</li>
+<li>方案一：前端+后端，支持jsonp方式请求 -&gt; 仅支持GET方式，不支持POST方式，原理：利用不受同源策略的标签来实现</li>
+<li>方案二：后端开启CORS跨域资源共享（就是在http的响应头里设置一个字段  Access-Control-Allow-Origin：* ）本服务器允许任何人来请求，前端正常请求，浏览器发现这个端口允许跨域，所以不报错拿到数据给前端用</li>
 <li>方案三：代理转发，本地自己node+http搭建一个web服务，用服务器去请求另外一个服务器的接口把数据请求回来转发给自己的前端使用（服务器与服务器之间不存在跨域问题，即使地址不同）前端请求本地的这个服务器，而不能直接请求后端（用于后端正常提供接口，但不开启CORS的情况）</li>
+</ul>
+</blockquote>
+<h2 id="关于flex"><a href="#关于flex" class="headerlink" title="关于flex"></a>关于flex</h2><blockquote>
+<p><strong>flex1</strong> 代表什么意思</p>
+<ul>
+<li><strong>flex</strong> 属性是 flex-grow, flex-shrink 和 flex-basis 的简写，默认值为 0 1 auto。后两个属性可选</li>
+<li><strong>flex-grow</strong> 属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。如果所有项目的flex-grow属性都为1，则它们将等分剩余空间</li>
+<li><strong>flex-shrink</strong> 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。如果所有项目的flex-shrink属性都为1，当空间不足时，都将等比例缩小。如果一个项目的flex-shrink属性为0，其他项目都为1，则空间不足时，前者不缩小。</li>
+<li><strong>flex-basis</strong> 属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小</li>
+<li><strong>所以flex: 1表示的含义是等分剩余空间。</strong></li>
+<li>align-items 属性定义项目在交叉轴上如何对齐。</li>
+<li>justify-content 属性定义了项目在主轴上的对齐方式。</li>
 </ul>
 </blockquote>
 </div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/Vue的内容/,Sunth01,前端面试题,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="next pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/%E5%85%B3%E4%BA%8EVuex/" title="Vuex前言">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
