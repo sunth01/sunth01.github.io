@@ -66,18 +66,16 @@
     <link href="http://example.com/2023/04/10/Vue-Router/"/>
     <id>http://example.com/2023/04/10/Vue-Router/</id>
     <published>2023-04-10T11:04:25.000Z</published>
-    <updated>2023-04-17T12:30:35.396Z</updated>
+    <updated>2023-04-21T09:40:29.638Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>创建路由规则并创建路由实例</strong></p><ul><li>routers是路由规则数组</li><li>每个路由规则都是一个配置对象，其中至少包含 path 和 component两个属性</li><li>path 表示当前路由规则匹配的 hash 地址</li><li>component 表示当前路由规则对应要展示的组件</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">routes:[</span><br><span class="line">&#123;path:&#x27;/&#x27;,redirect:&#x27;/user&#x27;&#125;</span><br><span class="line">&#123;path:&#x27;/user&#x27;,commponent:User&#125;,</span><br><span class="line">&#123;path:&#x27;/register&#x27;,component:Register&#125;</span><br><span class="line">]</span><br><span class="line">&#125;)</span><br><span class="line">// 最后在new Vue中奖router挂载到Vue根实例中</span><br></pre></td></tr></table></figure><p><strong>路由重定向</strong></p><ul><li>通过路由规则的 redirect 属性，指定一个新的路由地址</li><li>{ path:’/‘,redirect:’/user’ }</li><li>当用户在地址栏中输入 “/” ，会自动跳转到 ”/user“  而 /user 对应的组件为User</li></ul><p><strong>props接收参数</strong></p><ul><li><p>props为布尔类型时：</p></li><li><img src="https://s2.loli.net/2023/04/17/d7DcUKej4FyJz5k.png" alt="image-20230417201850655" style="zoom:50%;" /></li><li><p>props的值为对象类型时：</p></li><li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230417201956598.png" alt="image-20230417201956598" style="zoom:50%;" /></li><li><p>props的值为函数类型时：</p></li><li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230417202030571.png" alt="image-20230417202030571" style="zoom:50%;" /></li></ul><p><strong>命名路由</strong></p><ul><li>在配置路由项中添加name：“xxx”，使用时 如 </li><li><router-lonk :to="{name:'user',params:{id:123}}"></router-link></li></ul><p><strong>编程式导航</strong></p><ul><li>通过调用 js 形式的 API 实现导航的方式叫做编程式导航</li><li>例如：普通网页中的 location. href</li><li>this. $router.push ( ‘ hash地址 ‘ ) — 跳转的实现，参数不仅可以传递字符串（路径名称），也可以传递对象、命名的路由（传递参数）、带查询参数，变成 /register?uname=lisi</li><li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230417202641848.png" alt="image-20230417202641848" style="zoom:50%;" /></li><li>this. $router. go ( n )  —- 后退的实现（参数是-1 -2 等）</li></ul><p><strong>声明式导航</strong></p><ul><li>点击链接实现导航的方式，叫做声明式导航</li><li>例如：普通网页的 a标签、或者vue中的 router-link</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router"></a>vue-router</h2><ol><li>安装vue-router依赖</li><li>再在min.js中引入vue-router</li><li>添加到Vue.use(VueRouter)</li><li>创建router实例 // const router = new VueRouter()</li><li>将路由对象注入到new Vue实例中</li></ol><p><strong>创建路由规则并创建路由实例</strong></p><ul><li>routers是路由规则数组</li><li>每个路由规则都是一个配置对象，其中至少包含 path 和 component两个属性</li><li>path 表示当前路由规则匹配的 hash 地址</li><li>component 表示当前路由规则对应要展示的组件</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">routes:[</span><br><span class="line">&#123;path:&#x27;/&#x27;,redirect:&#x27;/user&#x27;&#125;</span><br><span class="line">&#123;path:&#x27;/user&#x27;,commponent:User&#125;,</span><br><span class="line">&#123;path:&#x27;/register&#x27;,component:Register&#125;</span><br><span class="line">]</span><br><span class="line">&#125;)</span><br><span class="line">// 最后在new Vue中奖router挂载到Vue根实例中</span><br></pre></td></tr></table></figure><p><strong>路由重定向</strong></p><ul><li>通过路由规则的 redirect 属性，指定一个新的路由地址</li><li>{ path:’/‘,redirect:’/user’ }</li><li>当用户在地址栏中输入 “/” ，会自动跳转到 ”/user“  而 /user 对应的组件为User</li></ul><p><strong>props接收参数</strong></p><ul><li><p>props为布尔类型时：</p></li><li><img src="https://s2.loli.net/2023/04/17/d7DcUKej4FyJz5k.png" alt="image-20230417201850655" style="zoom:50%;" /></li><li><p>props的值为对象类型时：</p></li><li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230417201956598.png" alt="image-20230417201956598" style="zoom:50%;" /></li><li><p>props的值为函数类型时：</p></li><li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230417202030571.png" alt="image-20230417202030571" style="zoom:50%;" /></li></ul><p><strong>命名路由</strong></p><ul><li>在配置路由项中添加name：“xxx”，使用时 如 </li><li><router-lonk :to="{name:'user',params:{id:123}}"></router-link></li></ul><p><strong>编程式导航</strong></p><ul><li>通过调用 js 形式的 API 实现导航的方式叫做编程式导航</li><li>例如：普通网页中的 location. href</li><li>this. $router.push ( ‘ hash地址 ‘ ) — 跳转的实现，参数不仅可以传递字符串（路径名称），也可以传递对象、命名的路由（传递参数）、带查询参数，变成 /register?uname=lisi</li><li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230417202641848.png" alt="image-20230417202641848" style="zoom:50%;" /></li><li>this. $router. go ( n )  —- 后退的实现（参数是-1 -2 等）</li></ul><p><strong>声明式导航</strong></p><ul><li>点击链接实现导航的方式，叫做声明式导航</li><li>例如：普通网页的 a标签、或者vue中的 router-link</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;strong&gt;创建路由规则并创建路由实例&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;routers是路由规则数组&lt;/li&gt;
-&lt;li&gt;每个路由规则都是一个配置对象，其中至少包含 path 和 component两个属性&lt;/li&gt;
-&lt;li&gt;path 表示当前路由规则匹配的 </summary>
+    <summary type="html">&lt;h2 id=&quot;vue-router&quot;&gt;&lt;a href=&quot;#vue-router&quot; class=&quot;headerlink&quot; title=&quot;vue-router&quot;&gt;&lt;/a&gt;vue-router&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;安装vue-router依赖&lt;/li&gt;
+&lt;li&gt;再在min.js</summary>
       
     
     
@@ -86,18 +84,42 @@
   </entry>
   
   <entry>
-    <title>快捷入门</title>
-    <link href="http://example.com/2023/04/10/hello-world/"/>
-    <id>http://example.com/2023/04/10/hello-world/</id>
-    <published>2023-04-10T08:01:25.161Z</published>
-    <updated>2023-04-10T12:05:46.382Z</updated>
+    <title>重要又记不住</title>
+    <link href="http://example.com/2023/04/10/%E8%84%B1%E4%BF%9D%E5%BF%85%E5%A4%87/"/>
+    <id>http://example.com/2023/04/10/%E8%84%B1%E4%BF%9D%E5%BF%85%E5%A4%87/</id>
+    <published>2023-04-10T11:04:25.000Z</published>
+    <updated>2023-04-21T07:07:35.923Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>详细信息: <a href="https://hexo.io/docs/writing.html">写作</a></p><h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>详细信息: <a href="https://hexo.io/docs/server.html">服务器</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>详细信息: <a href="https://hexo.io/docs/generating.html">生成</a></p><h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>详细信息: <a href="https://hexo.io/docs/one-command-deployment.html">部署</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Pomise"><a href="#Pomise" class="headerlink" title="Pomise"></a>Pomise</h2><ul><li>三个状态 成功/失败/初始化</li><li>promise.all() // 所有的 promise 全部成功则返回成功，其中一个失败就返回失败</li><li>promise.race() // 对比返回最快的 promise，如果最快的 promise 失败，则失败，race 只管最快的，不管其他的 promise</li><li>promise.resolve() // 直接创建一个从成功的 promise</li><li>promise.reject() // 直接创建一个失败的 promise</li></ul><h2 id="弹窗组件封装"><a href="#弹窗组件封装" class="headerlink" title="弹窗组件封装"></a>弹窗组件封装</h2><ul><li>简单的使用：只是父组件传数据到子组件，—使用 props 即可实现<blockquote><p>在 components 文件夹中新建一个 MyDialog.vue 组件，在 App.vue 中 import 导入 mydialog 组件，在 components 中引入 mydialog 并在页面使用 mydialog 标签，在父组件中 mydialog 的标签上定义一个属性，在 mydialog 组件中使用 props 接收父组件传递的参数，在其要显示的内容处使用插值表达式的方式使用定义的属性名</p></blockquote></li><li>如果想要实现组件的内部某些自定义结构，—需要使用 solt 插槽<blockquote><p>在子组件mydialog想要定义内容的位置放置solt插槽</p></blockquote></li></ul><h2 id="Ajax、Fetch、Axios三者的区别吗？"><a href="#Ajax、Fetch、Axios三者的区别吗？" class="headerlink" title="Ajax、Fetch、Axios三者的区别吗？"></a>Ajax、Fetch、Axios三者的区别吗？</h2><blockquote><p>最大的特性就是局部刷新页面，无需重载整个页面。</p></blockquote>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h2 id=&quot;Pomise&quot;&gt;&lt;a href=&quot;#Pomise&quot; class=&quot;headerlink&quot; title=&quot;Pomise&quot;&gt;&lt;/a&gt;Pomise&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;三个状态 成功/失败/初始化&lt;/li&gt;
+&lt;li&gt;promise.all() // 所有的 pro</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>项目难点亮点</title>
+    <link href="http://example.com/2023/04/10/%E9%A1%B9%E7%9B%AE%E9%9A%BE%E7%82%B9%E4%BA%AE%E7%82%B9/"/>
+    <id>http://example.com/2023/04/10/%E9%A1%B9%E7%9B%AE%E9%9A%BE%E7%82%B9%E4%BA%AE%E7%82%B9/</id>
+    <published>2023-04-10T11:04:25.000Z</published>
+    <updated>2023-04-21T03:18:17.718Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="虚拟列表"><a href="#虚拟列表" class="headerlink" title="虚拟列表"></a>虚拟列表</h2><ul><li>分为三个区域，可视区域，滚动区域，占位区域</li><li>可视区域的高度小于滚动区域，可视区域包裹着滚动区域，滚动区域包裹着占位区域，可视区域要加属性 overflow-y：auto进行隐藏滚动区域高出来的数据部分，实现滚动效果，可视区域固定一个高度用来显示数据，滚动区域的高度是动态的（高度是 用数据每一项的高度 乘以 总数据的条数），占位区域的高度是动态的 （高度是 用滚动上去第几项数据的索引值 乘以 单条数据的高度） 来实现占位区域的高度，使用e.target.scorlltop 来监听滚动条的位置高度，使用这个高度除以每一项元素的高度 就是当前滚动到第几项数据的索引值，然后在computed计算属性中定义一个存放十条数据的数组，使用 arr.slice 截取出总数据条数的前十条进行return返回来，在页面上使用for in 循环遍历 存放十条数据的数组然后渲染到页面上，实现虚拟列表</li><li>虚拟列表是按需显示的一种实现，既对可视区域进行渲染，非可视区域不渲染或者部分渲染，从而达到极高的渲染性能，简单说就是首屏加载的时候，只加载可视区域的内容，当滚动发生时，动态的计算获得可视区域内的列表项，并将非可视区域的内容进行删除</li><li>初始化一个变量 存放当前数据的索引值： 0 </li><li>监听滚动事件  定义一个滚动方法，通过 e.target.socrlltopp  获取到滚动条的位置（既距离顶部的位置），通过 Math.floor 计算出 现在的currentindex所对应的索引值（使用获取到的滚动条的位置除以每一项的高度），给可视区域固定的高度展示数据（添加overflow-y：auto），获取到滚动区域的总高度（数据的length * 30 px），给展位区域设置高度（当前滚动到数据的索引值 * 30），用computed计算属性定义一个空数组displayarr，使用 arr.slice 从全部数据中提取进行出来十条数据然后 return，然后for in 循环遍历displayarr把每一项数据进行渲染，实现虚拟列表</li></ul><h2 id="拖拉拽"><a href="#拖拉拽" class="headerlink" title="拖拉拽"></a>拖拉拽</h2><h2 id="canvas签名"><a href="#canvas签名" class="headerlink" title="canvas签名"></a>canvas签名</h2><h2 id="大文件上传"><a href="#大文件上传" class="headerlink" title="大文件上传"></a>大文件上传</h2><blockquote><p><strong>背景：</strong> 文件导入的时候如果文件过大，可能会导致所需时间过长，且失败后需要重新上传<br><strong>思路</strong> </p></blockquote><ul><li>对文件做切片，既将一个请求切分成多个请求，每个请求的时间会缩短，如果某个请求失败的话，只需要发送这一次请求即可，无需重新发送</li><li>通知服务器合并切片，在上传完切片后，前端通知服务器做合并切片操作</li><li>控制多个请求的并发量，防止多个请求同时发送，造成浏览器内存溢出，导致页面卡死</li><li>做断点续传，当多个请求中有请求发送失败，例如出现网络故障、页面关闭等，我们得对失败的请求做处理，让它们重复发送</li></ul><h2 id="Excel导入导出"><a href="#Excel导入导出" class="headerlink" title="Excel导入导出"></a>Excel导入导出</h2><h2 id="websocket大屏"><a href="#websocket大屏" class="headerlink" title="websocket大屏"></a>websocket大屏</h2><h2 id="webRTC直播"><a href="#webRTC直播" class="headerlink" title="webRTC直播"></a>webRTC直播</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;虚拟列表&quot;&gt;&lt;a href=&quot;#虚拟列表&quot; class=&quot;headerlink&quot; title=&quot;虚拟列表&quot;&gt;&lt;/a&gt;虚拟列表&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;分为三个区域，可视区域，滚动区域，占位区域&lt;/li&gt;
+&lt;li&gt;可视区域的高度小于滚动区域，可视区域包裹着滚动区域</summary>
       
     
     

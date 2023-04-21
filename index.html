@@ -10,11 +10,19 @@ vuex中的参数：
 
 state：{ count：0 } 存储数据
 mutations：{ updateCount（两个参数，第一个参数是修改的state、后续调用的传值）{ state.count = num } }
-ge...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2023/04/10/Vue-Router/">Vue-Router</a></h3></div><div class="post-content"><p>创建路由规则并创建路由实例
+ge...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2023/04/10/Vue-Router/">Vue-Router</a></h3></div><div class="post-content"><p>vue-router
+安装vue-router依赖
+再在min.js中引入vue-router
+添加到Vue.use(VueRouter)
+创建router实例 // const router = new VueRouter()
+将路由对象注入到new Vue实例中
 
-routers是路由规则数组
-每个路由规则都是一个配置对象，其中至少包含 path 和 component两个属性
-path 表示当前路由规则匹配的 hash 地址
-component 表示当前路由规则对应要展示的组件
+创建路由规则并创建路由实例
 
-12345678var router = new VueRou...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2023/04/10/hello-world/">快捷入门</a></h3></div><div class="post-content"><p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trouble...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":140,"height":300,"hOffset":-17,"vOffset":-5},"mobile":{"show":false,"scale":0.2},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false});</script></body></html>
+routers...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2023/04/10/%E8%84%B1%E4%BF%9D%E5%BF%85%E5%A4%87/">重要又记不住</a></h3></div><div class="post-content"><p>Pomise
+三个状态 成功/失败/初始化
+promise.all() // 所有的 promise 全部成功则返回成功，其中一个失败就返回失败
+promise.race() // 对比返回最快的 promise，如果最快的 promise 失败，则失败，race 只管最快的，不管其他的 promise
+prom...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2023/04/10/%E9%A1%B9%E7%9B%AE%E9%9A%BE%E7%82%B9%E4%BA%AE%E7%82%B9/">项目难点亮点</a></h3></div><div class="post-content"><p>虚拟列表
+分为三个区域，可视区域，滚动区域，占位区域
+可视区域的高度小于滚动区域，可视区域包裹着滚动区域，滚动区域包裹着占位区域，可视区域要加属性 overflow-y：auto进行隐藏滚动区域高出来的数据部分，实现滚动效果，可视区域固定一个高度用来显示数据，滚动区域的高度是动态的（高度是 用数据每一项的高度 乘...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":140,"height":300,"hOffset":-17,"vOffset":-5},"mobile":{"show":false,"scale":0.2},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false});</script></body></html>
