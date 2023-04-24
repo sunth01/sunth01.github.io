@@ -11,10 +11,14 @@
 <p><strong>背景：</strong> 文件导入的时候如果文件过大，可能会导致所需时间过长，且失败后需要重新上传<br><strong>思路</strong> </p>
 </blockquote>
 <ul>
-<li>对文件做切片，既将一个请求切分成多个请求，每个请求的时间会缩短，如果某个请求失败的话，只需要发送这一次请求即可，无需重新发送</li>
-<li>通知服务器合并切片，在上传完切片后，前端通知服务器做合并切片操作</li>
-<li>控制多个请求的并发量，防止多个请求同时发送，造成浏览器内存溢出，导致页面卡死</li>
-<li>做断点续传，当多个请求中有请求发送失败，例如出现网络故障、页面关闭等，我们得对失败的请求做处理，让它们重复发送</li>
+<li><p>对文件做切片，既将一个请求切分成多个请求，每个请求的时间会缩短，如果某个请求失败的话，只需要发送这一次请求即可，无需从头开始<br>配置请求基地址，指示后续的请求应发向哪个服务器地址<br>监听input框file的onChange事件，当用户选择文件上传时，将其存储在全局变量file中</p>
+</li>
+<li><p>通知服务器合并切片，在上传完切片后，前端通知服务器做合并切片操作</p>
+</li>
+<li><p>控制多个请求的并发量，防止多个请求同时发送，造成浏览器内存溢出，导致页面卡死</p>
+</li>
+<li><p>做断点续传，当多个请求中有请求发送失败，例如出现网络故障、页面关闭等，我们得对失败的请求做处理，让它们重复发送</p>
+</li>
 </ul>
 <h2 id="Excel导入导出"><a href="#Excel导入导出" class="headerlink" title="Excel导入导出"></a>Excel导入导出</h2><h2 id="websocket大屏"><a href="#websocket大屏" class="headerlink" title="websocket大屏"></a>websocket大屏</h2><h2 id="webRTC直播"><a href="#webRTC直播" class="headerlink" title="webRTC直播"></a>webRTC直播</h2></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/项目难点亮点/,Sunth01,项目难点亮点,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/%E8%84%B1%E4%BF%9D%E5%BF%85%E5%A4%87/" title="重要又记不住">上一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
   el:'#vcomments',
