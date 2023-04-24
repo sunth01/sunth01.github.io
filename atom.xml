@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-24T11:42:17.993Z</updated>
+  <updated>2023-04-24T12:32:55.808Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2023/04/24/Vue3/"/>
+    <id>http://example.com/2023/04/24/Vue3/</id>
+    <published>2023-04-24T11:56:26.630Z</published>
+    <updated>2023-04-24T12:32:55.808Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Vue3选项式API"><a href="#Vue3选项式API" class="headerlink" title="Vue3选项式API"></a>Vue3选项式API</h2><p>只有一个参数，不会出现参数顺序的问题，随意调整配置的位置</p><p>语义化强</p><p>双花括号中不能放js语句，可以放表达式，函数，数组，字符串等</p><p>vue底层利用 new porxy来把data中的数据监控起来，不管用什么方法对数据进行修改，就会触发重渲染，内部的重渲染就会对试图进行更新</p><p>v-bind：绑定对应的标签如（v-bind：class/title。。。），可以使标签变成响应式的绑定数据 —-简写 –&gt;  :title</p><p>v-on：添加事件 如（v-on：click/mouse。。。）–&gt; 简写—&gt; @click</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Vue3选项式API&quot;&gt;&lt;a href=&quot;#Vue3选项式API&quot; class=&quot;headerlink&quot; title=&quot;Vue3选项式API&quot;&gt;&lt;/a&gt;Vue3选项式API&lt;/h2&gt;&lt;p&gt;只有一个参数，不会出现参数顺序的问题，随意调整配置的位置&lt;/p&gt;
+&lt;p&gt;语义</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title></title>
