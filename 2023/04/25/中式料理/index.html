@@ -10,7 +10,7 @@
 <p>用ctx。fillStyle（）定义绘制区域的填充颜色，</p>
 <p>绘制完之后用canvas。clearRect 清空绘制版，</p>
 <p>============================</p>
-<p>首先拿到绘制签名的工具，定义画板canvas的大小为绘制区域，使用canvas。getContext（”2d“）画笔，用window。addEventListener（”mousedown“）监听mousedown鼠标按下，并判断鼠标是否在画板上按下的，所以需要获取到画板位置的大小（canvas。getBoundingClienRect（））使用e。clientX和clientY获取到鼠标点击的位置并判断是否小于画板位置的大小，我们可以称之为<strong>命中检测</strong> 如果在画板内部就注册两个监听器，监听mousemove鼠标移动和mouseup鼠标抬起，传入一个方法draw，draw方法中也有一个事件，在这里我们美监听一次draw事件就要接着上次的画，所以要计算出画笔的一个具体位置，这个位置是相对于整个canvas的具体位置，用ctx。beginPath（）准备开始描线，ctx。moveTo（x，y）是画笔的起始点，ctx。lineTo（）是画笔的终点，ctx。stroke（）进行描线，然后更新起点，生成签名。给button按钮绑定点击事件，初始化一个变量接收 canvas。toDataURL（）生成base64的图片</p>
+<p>先定义画板canvas的大小为绘制区域，使用canvas。getContext（”2d“）作为画笔，用window。addEventListener（”mousedown“）监听mousedown鼠标按下，并判断鼠标是否在画板上按下的，所以需要获取到画板位置的大小（canvas。getBoundingClienRect（））使用e。clientX和clientY获取到鼠标点击的位置并判断是否小于画板位置的大小，我们可以称之为<strong>命中检测</strong> 如果在画板内部就注册两个监听器，监听mousemove鼠标移动和mouseup鼠标抬起，传入一个方法draw，draw方法中也有一个事件，在这里我们美监听一次draw事件就要接着上次的画，所以要计算出画笔的一个具体位置，这个位置是相对于整个canvas的具体位置，用ctx。beginPath（）准备开始描线，ctx。moveTo（x，y）是画笔的起始点，ctx。lineTo（）是画笔的终点，ctx。stroke（）进行描线，然后更新起点，生成签名。给button按钮绑定点击事件，初始化一个变量接收 canvas。toDataURL（）生成base64的图片</p>
 <h3 id="ES6新增"><a href="#ES6新增" class="headerlink" title="ES6新增"></a>ES6新增</h3><p>新增声明命令 let const，模板字符串，inport和export，poemise，数组对象的解构赋值，set数据结构 ：（size数据长度，add添加某个值，返回set结构本身，clear清除所有成员，没有返回值），class，展开运算符，</p>
 <h3 id="this的指向"><a href="#this的指向" class="headerlink" title="this的指向"></a>this的指向</h3><ul>
 <li>以函数形式调用时，this 永远都是 window</li>
