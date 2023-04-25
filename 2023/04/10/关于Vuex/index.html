@@ -8,7 +8,7 @@ mutations：{ updateCount（两个参数，第一个参数是修改的state、�
 <p>vuex中的参数：</p>
 <ul>
 <li><strong>state</strong>：{ count：0 } 存储数据</li>
-<li><strong>mutations</strong>：{ updateCount（两个参数，第一个参数是修改的state、后续调用的传值）{ state.count = num } }</li>
+<li><strong>mutations</strong>：{ updateCount（两个参数，第一个参数是修改的state、后续调用的传值）{ state.count = num } } ()</li>
 <li><strong>getters</strong> 可以理解为computed 是为了方便生成一些在组件内可以直接使用的数据，统一产出state中的数据， </li>
 <li><strong>actions</strong> （第一个参数是store，第二个参数是触发这个函数时传入的参数，如果多个参数需要写成对象）actions可以写异步代码，mutations不能写异步代码，</li>
 <li>mapactions和mapmutations需要写在methods方法中，用法跟mapGetters一样</li>
