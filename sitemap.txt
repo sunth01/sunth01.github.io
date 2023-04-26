@@ -10,10 +10,10 @@ http://example.com/tags/index.html
 http://example.com/about/index.html
 http://example.com/guestbook/index.html
 http://example.com/
-http://example.com/tags/sunth04/
-http://example.com/tags/sunth07/
-http://example.com/tags/sunth06/
 http://example.com/tags/sunth01/
-http://example.com/tags/sunth05/
-http://example.com/tags/sunth03/
 http://example.com/tags/sunth02/
+http://example.com/tags/sunth03/
+http://example.com/tags/sunth04/
+http://example.com/tags/sunth05/
+http://example.com/tags/sunth06/
+http://example.com/tags/sunth07/
