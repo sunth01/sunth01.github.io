@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author"><title>小程序 · Sunth01</title><meta name="description" content="小程序生命周期
+onLoad 页面开始加载 发送请求获取数据,获取到导航参数
+onShow 页面显示 (多次触发) 提示信息
+onReady 页面初次渲染完成
+onHide 页面隐藏 tabbar 页面切换只是隐藏
+onUnload 页面销毁 不是 tabbar 页面 b 页面 返回 A 页面对应的"><meta name="keywords" content="极限博客,极限Blog,博客,极限"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Sunth01</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"></ul><div class="footer"><div class="p"> <span>©  </span><i class="fa fa-star"></i><span> </span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div><div class="beian"><a href="http://www.beian.miit.gov.cn/" target="_blank"></a><span style="height:10px;margin-left: 10px;">|</span><img src="/images/gongan.png" style="height:10px;margin-left: 10px;position: relative;top: 1px;"><span style="margin-left: 2px;"></span></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>小程序</a></h3></div><div class="post-content"><h2 id="小程序生命周期"><a href="#小程序生命周期" class="headerlink" title="小程序生命周期"></a>小程序生命周期</h2><ol>
+<li>onLoad 页面开始加载 发送请求获取数据,获取到导航参数</li>
+<li>onShow 页面显示 (多次触发) 提示信息</li>
+<li>onReady 页面初次渲染完成</li>
+<li>onHide 页面隐藏 tabbar 页面切换只是隐藏</li>
+<li>onUnload 页面销毁 不是 tabbar 页面 b 页面 返回 A 页面对应的页面销毁 // 清理操作</li>
+</ol>
+<h2 id="原生小程序组件及如何绑定事件"><a href="#原生小程序组件及如何绑定事件" class="headerlink" title="原生小程序组件及如何绑定事件"></a>原生小程序组件及如何绑定事件</h2><ul>
+<li>通过 bind: 或者 bind 绑定事件</li>
+<li>常用的小程序组件<ul>
+<li>view: 盒子</li>
+<li>text: 文本</li>
+<li>richtext: 富文本,可以通过 nodes 节点解析 html 标签</li>
+<li>scroll-view: 滚动区域</li>
+<li>swiper: 轮播图</li>
+<li>button: 按钮组件</li>
+</ul>
+</li>
+</ul>
+<h2 id="原生小程序中如何修改数据并同步视图"><a href="#原生小程序中如何修改数据并同步视图" class="headerlink" title="原生小程序中如何修改数据并同步视图?"></a>原生小程序中如何修改数据并同步视图?</h2><ul>
+<li>this.setData(), 既可以更改数据,也可以同步视图</li>
+<li>不可以直接修改数据, 直接 this.data.数据名, 之更改数据,视图不变</li>
+</ul>
+<h2 id="小程序中发起网络请求"><a href="#小程序中发起网络请求" class="headerlink" title="小程序中发起网络请求"></a>小程序中发起网络请求</h2><ul>
+<li>通过 WX.request,而且这个方法不支持 promise,所使用原生小程序开发,需要对 wx.request 进行二次封装</li>
+<li>小程序中不存在跨域的问题</li>
+</ul>
+<h2 id="定义全局组件和局部组件"><a href="#定义全局组件和局部组件" class="headerlink" title="定义全局组件和局部组件"></a>定义全局组件和局部组件</h2><p><strong>全局组件</strong></p>
+<ol>
+<li>创建一个组件</li>
+<li>通过 app.json 中的 useingComponets 进行组件注册,注册为全局组件</li>
+</ol>
+<p><strong>局部组件</strong></p>
+<ol>
+<li>创建一个组件</li>
+<li>通过页面的 json 中的 useingComponets 进行组件注册,注册为局部组件</li>
+</ol>
+<h2 id="查询参数传参"><a href="#查询参数传参" class="headerlink" title="查询参数传参"></a>查询参数传参</h2><ul>
+<li>在 router-link 上的 to 属性传值，语法格式：/path？参数名=值</li>
+<li>对应页面组件接收传递过来的值 语法格式：$route. query. 参数名</li>
+</ul>
+<h2 id="动态路由传参"><a href="#动态路由传参" class="headerlink" title="动态路由传参"></a>动态路由传参</h2><ul>
+<li>目标：在跳转路由时，可以给路由对应的组件内传值</li>
+<li>在 router-link 上的 to 属性传值，语法格式：<ul>
+<li>/path？参数名 = 值</li>
+<li>/path/值 - 需要路由对象提前配置 path：“/path/参数名”</li>
+</ul>
+</li>
+<li>对应页面组件接收传递过来的值<ul>
+<li>$route. query. 参数名</li>
+<li>$route. params. 参数名</li>
+<li><img src="C:/Users/86132/AppData/Roaming/Typora/typora-user-images/image-20230424191628777.png" alt="image-20230424191628777"></li>
+</ul>
+</li>
+</ul>
+<h2 id="路由重定向"><a href="#路由重定向" class="headerlink" title="路由重定向"></a>路由重定向</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123; path: &quot;/&quot;, // 默认hash值路径 redirect: &quot;/find&quot; // 重定向到/find //</span><br><span class="line">浏览器url中#后的路径被改变成/find-重新匹配数组规则 &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="路由模式"><a href="#路由模式" class="headerlink" title="路由模式"></a>路由模式</h2><h3 id="hash-和-history"><a href="#hash-和-history" class="headerlink" title="hash 和 history"></a>hash 和 history</h3><ul>
+<li>hash 在地址栏会有#号<ul>
+<li>用 window.location.hash 读取。特点：hash 虽然在 URL 中，但不被包括在 HTTP 请求中，hash 不会重加载页面</li>
+</ul>
+</li>
+<li>history 地址栏没有#<ul>
+<li>history 采用 HTML5 的新特性；且提供了两个新方法：pushState()， replaceState()可以对浏览器历史记录栈进行修改，以及 popState 事件的监听的状态变更</li>
+</ul>
+</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/小程序/,Sunth01,小程序,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/%E9%A1%B9%E7%9B%AE%E9%9A%BE%E7%82%B9%E4%BA%AE%E7%82%B9/" title="项目难点亮点">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/Vue3/" title="Vue3">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:false || false, 
+  verify:false|| false, 
+  app_id:'Sj7U6VyVNk4L01EU9nLmESxi-gzGzoHsz',
+  app_key:'5vu6nZlOhpfwbUa9hxZVUHLo',
+  placeholder:'念念不忘，必有回响...',
+  path: window.location.pathname,
+  serverURLs: 'https://sj7u6vyv.lc-cn-n1-shared.com',
+  visitor:true,
+  recordIP:true,
+  avatar:'mp'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"left","width":140,"height":300,"hOffset":-17,"vOffset":-5},"mobile":{"show":false,"scale":0.2},"react":{"opacityDefault":0.8,"opacityOnHover":0.2},"log":false});</script></body></html>
