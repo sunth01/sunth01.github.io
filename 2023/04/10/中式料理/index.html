@@ -25,13 +25,17 @@
 <li>以函数形式调用时，this 永远都是 window</li>
 <li>以方法的形式调用时，this 是调用方法的对象</li>
 <li>以构造函数的形式调用时，this 是新创建的那个对象</li>
-<li>使用 call 和 apply 调用时，this 是指定的那个对象</li>
+<li>使用 call 和 apply 调用时，this 是指定的那个对象<ul>
+<li>call 和 apply 的区别：两者的作用相同，都是将 this 绑定到某个对象上，并<code>立即执行这个函数</code>。它们的主要区别在于传递参数的方式不同：<code>call() 方法接收一个或多个参数列表，apply() 方法接收一个数组参数</code></li>
+<li>bind() 方法会返回一个新的函数，它的 this 值被绑定到了传入的值。不同于 call() 和 apply()，bind() 不会调用函数，而是返回修改前的函数，稍后需要调用才能执行</li>
+</ul>
+</li>
 <li>箭头函数：箭头函数的 this 看外层是否有函数如果有，外层函数的 this 就是内部箭头函数的 this 如果没有，就是 window</li>
 </ul>
 <h3 id="vue-生命周期"><a href="#vue-生命周期" class="headerlink" title="vue 生命周期"></a>vue 生命周期</h3><p>创建阶段</p>
 <ul>
 <li>beforeCreate：开始创建实例，现在还没有实例的数据和方法</li>
-<li>created：实例创建完成，数据和方法已经存在了，精虫在这发送请求获取数据</li>
+<li>created：实例创建完成，数据和方法已经存在了，经常在这发送请求获取数据</li>
 </ul>
 <p>挂载阶段</p>
 <ul>
