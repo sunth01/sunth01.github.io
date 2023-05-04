@@ -358,20 +358,24 @@ key 的作用：
 </li>
 </ul>
 <h2 id="Vue-组件如何进行传值"><a href="#Vue-组件如何进行传值" class="headerlink" title="Vue 组件如何进行传值"></a>Vue 组件如何进行传值</h2><ul>
-<li>父传子</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
+<li><p>父传子</p>
 <ul>
-<li>子传父</li>
+<li>父组件属性方式传递，子组件props接收</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
+</li>
+<li><p>子传父</p>
 <ul>
-<li>兄弟传参</li>
+<li>子组件通过$emit，父组件通过自定义事件 </li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
+</li>
+<li><p>兄弟传参</p>
+<ul>
+<li>eventbus // 手写发布订阅模式</li>
+</ul>
+</li>
+<li><p>传参的方式还有：vuex，ref获取子组件，v-model，.sync，$parent可以获取到当前组件的父组件，返回当前组件的父组件</p>
+</li>
+</ul>
 <h2 id="Vue-中的-data-为什么是函数"><a href="#Vue-中的-data-为什么是函数" class="headerlink" title="Vue 中的 data 为什么是函数"></a>Vue 中的 data 为什么是函数</h2><ol>
 <li>每个组件都是 Vue 的实例。</li>
 <li>组件共享 data 属性，当 data 的值是同一个引用类型的值时，改变其中一个会影响其他,造成变量污染</li>
