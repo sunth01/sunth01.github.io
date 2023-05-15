@@ -70,6 +70,14 @@ onUnload 页面销毁 不是 tabbar 页面 b 页面 返回 A 页面对应的"><m
 </ul>
 </li>
 </ul>
+<h3 id="小程序支付"><a href="#小程序支付" class="headerlink" title="小程序支付"></a>小程序支付</h3><ol>
+<li>注册微信商户号</li>
+<li>点击按钮触发 wx.requestPayment，进行预付费（用户付费），通知微信</li>
+<li>微信返回加密信息和交易信息</li>
+<li>拿着这些信息发给服务器（商户）</li>
+<li>服务器向微信确认</li>
+<li>交易完成，前端监听交易情况</li>
+</ol>
 </div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-10</span><i class="fa fa-tag"></i><a class="tag" href="/tags/小程序/" title="小程序">小程序 </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" target="_blank" rel="noopener" href="http://twitter.com/home?status=,http://example.com/2023/04/10/小程序/,sunth01,小程序,;"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/%E9%A1%B9%E7%9B%AE%E9%9A%BE%E7%82%B9%E4%BA%AE%E7%82%B9/" title="项目难点亮点">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2023/04/10/Vue3/" title="Vue3">下一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
   el:'#vcomments',
   notify:false || false, 
